@@ -7,6 +7,7 @@ import Nav  from './components/Nav'
 import Signup from './components/SignUp';
 import ComponentA from './components/ComponentA';
 import ComponentB from './components/ComponentB';
+import Recipes from './components/Recipes';
 
 
 function App() {
@@ -14,8 +15,6 @@ function App() {
     name:'Alex',
     favorite:'potato'
   })
-
-  const [bigNumber, setBigNumber] = useState(13333333333);
 
 
   return (
@@ -26,6 +25,10 @@ function App() {
       <main>
         <Routes>
           <Route path="/signup" element={ <Signup/> } />
+          <Route path="/recipes" element={ <Recipes/> } />
+          
+
+
         </Routes>
         <DataContext.Provider value={{ chefInfo, setChefInfo}}>
           <h1>components</h1>

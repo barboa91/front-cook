@@ -17,3 +17,8 @@ code {
 .signup{
   background-color: blueviolet;
 }
+.ingredients{
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
