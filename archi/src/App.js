@@ -12,15 +12,15 @@ import Recipes from './components/Recipes';
 
 function App() {
   const [chefInfo, setChefInfo] = useState({
-    name:'Alex',
-    favorite:'potato'
+    loggedIn : true,
+    blah:"ssssss"
   })
 
 
   return (
     <div className="App">
       <header className="Nav">
-        <Nav/>
+      <DataContext.Provider value={{ chefInfo, setChefInfo}}><Nav/></DataContext.Provider>
       </header>
       <main>
         <Routes>
@@ -32,8 +32,6 @@ function App() {
         </Routes>
         <DataContext.Provider value={{ chefInfo, setChefInfo}}>
           <h1>components</h1>
-          <ComponentA/>
-          <ComponentB/>
         </DataContext.Provider>
 
       </main>

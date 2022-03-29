@@ -7,11 +7,6 @@ const Recipes = () =>{
   let [recipes, setRecipies] = useState([]);
   let [chefs, setChefs] = useState([]);
 
-
-
-
-
-
   const chefData = (chefid)=>{
     const findChefName = chefi => chefs.find(chef => chef._id === chefi);
     const x = findChefName(chefid)
