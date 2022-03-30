@@ -8,7 +8,7 @@ const Recipes = () =>{
   let [chefs, setChefs] = useState([]);
 
   const chefData = (chefid)=>{
-    const findChefName = chefi => chefs.find(chef => chef._id === chefi);
+    const findChefName = chefi => chefs.find(chef => chef.username === chefi);
     const x = findChefName(chefid)
     return (x.firstName+" "+x.lastName)
   }
@@ -26,6 +26,7 @@ const Recipes = () =>{
       } catch (err) {
         console.log(err);
       }
+      
   }
   const loadAPI = () => {
     !APILOADED ? apiCall() : setAPILOADED(true);
@@ -33,7 +34,6 @@ const Recipes = () =>{
   useEffect(() => {
     loadAPI();
   },[]);
-
   if(!APILOADED){
     return(
     <p>LOADING</p>
@@ -41,18 +41,18 @@ const Recipes = () =>{
   }else
   return(
     <div>
-      {recipes.map((r) =>{
+      {recipes.map((r,index) =>{
         return(
-          <div className="recipeBlock"> 
+          <div key={index} className="recipeBlock"> 
             <div className="recipeName">{r.name}</div>
-            {r.pictures.length < 1 ?? <img alt="recipe" href={r.pictures}></img>} {/* if the there are no pictures, dont display */}
-            <ul className="ingredients">{r.ingredients.map((i)=>{            //loop through ingredients
-              return(<li className="ing">{i.amount} {i.name}</li>)
+            {r.pictures.length < 1 && <img alt="recipe" href={r.pictures}></img>} {/* if the there are no pictures, dont display */}
+            <ul className="ingredients">{r.ingredients.map((i,index)=>{            //loop through ingredients
+              return(<li key={index} className="ing">{i.amount} {i.name}</li>)
             })}</ul>
-            <ul className="rSteps">{r.steps.map((s)=>{            //loop through ingredients
-              return(<li className="rStep">{s.description}</li>)
+            <ul className="rSteps">{r.steps.map((s,index)=>{            //loop through ingredients
+              return(<li key={index} className="rStep">{s.description}</li>)
             })}</ul>
-            {r.comments.length < 1 ?? <div classname="rComments" href={r.comments}></div>} {/* if the there are no pictures, dont display */}
+            {r.comments.length < 1 && <div className="rComments" href={r.comments}></div>} {/* if the there are no pictures, dont display */}
             {chefData(r.chef)}
             <h6>{r.date}</h6>
           </div>

@@ -39,8 +39,12 @@ const Login = () =>{
                     username: x.username,
                     firstName: x.firstName,
                     lastName: x.lastName,
-                    profpic: x.profpic
+                    profpic: x.profpic,
+                    id: x._id
                 })
+                console.log(chefInfo)
+                // let chefI = chefInfo
+                // localStorage.setItem('chefI',chefI)
             } else {
                 alert("Wrong Password")
                 setChefInfo({

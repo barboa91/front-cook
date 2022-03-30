@@ -11,9 +11,11 @@ import NewRecipe from './components/NewRecipe';
 
 function App() {
   const [chefInfo, setChefInfo] = useState({
-    loggedIn : true,
-    blah:"ssssss"
+    loggedIn : false,
+    firstName:"Not Logged in",
+    username: "admin",
   })
+  
 
 
   return (
