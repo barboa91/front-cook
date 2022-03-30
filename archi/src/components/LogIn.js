@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import DataContext from "./DataContext";
 
@@ -40,8 +41,6 @@ const Login = () =>{
                     lastName: x.lastName,
                     profpic: x.profpic
                 })
-
-
             } else {
                 alert("Wrong Password")
                 setChefInfo({
@@ -66,7 +65,16 @@ const Login = () =>{
       useEffect(() => {
         loadAPI();
       },[])
+    
+      if(chefInfo.loggedIn){
+          return (
+                        <div>
+                            <Link to="/newrecipe"> New Recipe </Link> 
 
+                            <div>Welcome</div>
+                        </div>
+          )
+      } 
 
     return(
         <div className="login">
