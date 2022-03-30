@@ -55,6 +55,7 @@ const Recipes = () =>{
             {r.comments.length < 1 && <div className="rComments" href={r.comments}></div>} {/* if the there are no pictures, dont display */}
             {chefData(r.chef)}
             <h6>{r.date}</h6>
+            <button>DELETE</button>
           </div>
         )
       })}

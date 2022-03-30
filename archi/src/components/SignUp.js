@@ -128,7 +128,7 @@ const Signup = () => {
       />
       <br />
       <input
-        type="text"
+        type="password"
         placeholder="Password"
         name="pass"
         style={{ backgroundColor: pColor }}
@@ -137,7 +137,7 @@ const Signup = () => {
       />
       <br />
       <input
-        type="text"
+        type="password"
         placeholder="Password check"
         name="pcheck"
         style={{ backgroundColor: pColor }}
