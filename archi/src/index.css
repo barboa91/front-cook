@@ -1,10 +1,15 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #90bd8c;
 }
 
 code {
@@ -13,23 +18,35 @@ code {
 }
 main {
   text-align: center;
+  max-width: 1660px;
+  margin: 0 auto;
 }
 .Nav {
-  font-size: 2em;
+  font-size: 1.5em;
+  background-color: green;
+  background-image: linear-gradient(to right ,#2EB62C, #486e39);
+  padding: 10px;
 }
-.signup{
-  background-color: blueviolet;
-}
-.ingredients{
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-}
+
+
 .signUp{
     text-align: center;
+  margin: 0 auto;
+
     width: 400px;
 }
-input[type=text], select {
+
+input[type=text], .commInput {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 10px 5px 5px #ccc;
+}
+input[type=text] {
   width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -37,7 +54,9 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 25px;
   box-sizing: border-box;
+  box-shadow: 10px 5px 5px #ccc;
 }
+
 input[type=password], select {
   width: 50%;
   padding: 12px 20px;
@@ -46,4 +65,45 @@ input[type=password], select {
   border: 1px solid #ccc;
   border-radius: 25px;
   box-sizing: border-box;
+  box-shadow: 10px 5px 5px #ccc;
+
+}
+
+a {
+  padding: 1em;
+  color: #023020;
+  text-decoration: none;
+}
+
+.recipeName{
+  font-size: 2em;
+}
+.recipePic{
+  max-width: 300px;
+}
+.ingstep{
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+}
+.ingredients{
+  list-style-type: none;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  border: 2px solid black;
+}
+.rSteps{
+  padding-left: 50px;
+  width: 800px;
+  text-align: left;
+}
+.rComments{
+  display: block;
+}
+.commInput{
+  border-radius: 2px;
+
+
 }

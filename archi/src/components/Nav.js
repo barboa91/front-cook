@@ -6,7 +6,7 @@ const Nav = () =>{
     const { chefInfo, setChefInfo } = useContext(DataContext)
     
     return(
-        <div className="navigation bar">
+        <div className="navigationbar">
             <Link to="/"> Home </Link>
             {!chefInfo.loggedIn && <Link to="/signup"> Sign Up </Link>}
             {!chefInfo.loggedIn && <Link to="/login"> Log In </Link>}
